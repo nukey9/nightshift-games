@@ -20,8 +20,25 @@
   details[open] summary::after { content: "\2212"; }
   details .a { padding: 0 22px 18px; color: var(--dim); }
   details .a p:last-child { margin-bottom: 0; }
-  .contact-cards .card { display: flex; flex-direction: column; }
-  .contact-cards .card .btn { margin-top: auto; align-self: flex-start; }
+  .support-split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: start; }
+  .support-split .side { display: grid; gap: 20px; }
+  #report label { display: block; margin: 0 0 16px; font-weight: 600; font-size: 15px; color: var(--text); }
+  #report .opt { color: var(--faint); font-weight: 400; }
+  #report input, #report select, #report textarea {
+    display: block; width: 100%; margin-top: 7px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); font: 16px/1.5 "Inter", sans-serif;
+  }
+  #report textarea { resize: vertical; min-height: 140px; }
+  #report input:focus, #report select:focus, #report textarea:focus { outline: 2px solid rgba(255, 181, 71, 0.6); outline-offset: 1px; border-color: transparent; }
+  #report .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  #report .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  #report .fine { font-size: 14px; color: var(--faint); }
+  #report button[disabled] { opacity: 0.6; cursor: wait; }
+  #report .status { margin: 14px 0 0; font-weight: 600; min-height: 1.5em; }
+  #report .status.ok { color: #3ddc97; }
+  #report .status.err { color: var(--blood-hi); }
+  @media (max-width: 900px) { .support-split { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { #report .two { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -43,24 +60,57 @@
       <h2>How can we help?</h2>
       <p class="lead">Stuck, found a bug, or something's not working the way it should? Get in touch &mdash; a real person reads every message, usually within two business days.</p>
 
-      <div class="grid grid-3 contact-cards" style="margin-top:28px">
-        <div class="card">
-          <div class="k">Email support</div>
-          <h3>Ask us anything</h3>
-          <p>Questions about the game, your account, leaderboards or your data.</p>
-          <a class="btn btn-blood" href="mailto:lherr9253@gmail.com?subject=Barricaded%20support">Email support</a>
-        </div>
-        <div class="card">
-          <div class="k">Report a bug</div>
-          <h3>Something broke?</h3>
-          <p>Tell us what happened, and we'll fix it. Screenshots or a short headset recording help a lot.</p>
-          <a class="btn btn-ghost" href="mailto:lherr9253@gmail.com?subject=Barricaded%20bug%20report&amp;body=What%20happened%3A%0A%0AWhat%20you%20were%20doing%20just%20before%3A%0A%0AHeadset%20(Quest%203%20%2F%203S%20%2F%20other)%3A%0A%0AMode%20(Room%20%2F%20Outdoor%2C%20solo%20%2F%20co-op)%3A%0A%0ADoes%20it%20happen%20every%20time%3F%0A">Report a bug</a>
-        </div>
-        <div class="card">
-          <div class="k">Data requests</div>
-          <h3>Your information</h3>
-          <p>Ask to see or delete your leaderboard entries. Include your Meta username.</p>
-          <a class="btn btn-ghost" href="mailto:lherr9253@gmail.com?subject=Barricaded%20data%20request">Send a request</a>
+      <div class="support-split" style="margin-top:28px">
+        <form id="report" class="card" novalidate>
+          <div class="k">Send us a report</div>
+          <h3>Tell us what's going on</h3>
+          <label>Topic
+            <select name="topic">
+              <option>Bug report</option>
+              <option>Question</option>
+              <option>Data request</option>
+              <option>Arcade / business</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>What happened?
+            <textarea name="message" rows="7" maxlength="5000" required placeholder="What happened, what you were doing just before, and whether it happens every time."></textarea>
+          </label>
+          <div class="two">
+            <label>Your email <span class="opt">(so we can reply)</span>
+              <input type="email" name="email" maxlength="200" autocomplete="email" placeholder="you@example.com">
+            </label>
+            <label>Headset <span class="opt">(optional)</span>
+              <select name="headset">
+                <option value="">Choose&hellip;</option>
+                <option>Meta Quest 3</option>
+                <option>Meta Quest 3S</option>
+                <option>Meta Quest Pro</option>
+                <option>Meta Quest 2</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label>Name <span class="opt">(optional)</span>
+            <input type="text" name="name" maxlength="100" autocomplete="name">
+          </label>
+          <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <p class="fine">We use what you send only to help you. See our <a href="../barricaded/privacy/">Privacy Policy</a>.</p>
+          <button class="btn btn-blood" type="submit">Send report</button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="side">
+          <div class="card">
+            <div class="k">Prefer email?</div>
+            <h3>Write to us</h3>
+            <p><strong>Help and bug reports</strong><br><a href="mailto:support@nightshift-games.com?subject=Barricaded%20support">support@nightshift-games.com</a></p>
+            <p><strong>Everything else</strong> &mdash; press, partners, arcades<br><a href="mailto:contact@nightshift-games.com">contact@nightshift-games.com</a></p>
+          </div>
+          <div class="card">
+            <div class="k">Data requests</div>
+            <h3>Your information</h3>
+            <p>To see or delete your leaderboard entries, choose <em>Data request</em> in the form or email us, with your Meta username.</p>
+          </div>
         </div>
       </div>
       <p style="margin-top:18px;color:var(--faint);font-size:15px">Running a VR arcade? <a href="../barricaded/#arcades">See arcade hosting</a>. Refunds and purchases are handled by the Meta Horizon Store.</p>
@@ -109,7 +159,7 @@
 
       <details>
         <summary>How do I delete my data?</summary>
-        <div class="a"><p>Uninstalling the game removes everything it saved on your headset. To have your leaderboard entries deleted, <a href="mailto:lherr9253@gmail.com?subject=Barricaded%20data%20request">email us</a> with your Meta username. More in our <a href="../barricaded/privacy/">Privacy Policy</a>.</p></div>
+        <div class="a"><p>Uninstalling the game removes everything it saved on your headset. To have your leaderboard entries deleted, <a href="mailto:support@nightshift-games.com?subject=Barricaded%20data%20request">email us</a> with your Meta username. More in our <a href="../barricaded/privacy/">Privacy Policy</a>.</p></div>
       </details>
     </div>
   </section>
@@ -118,7 +168,7 @@
     <div class="wrap">
       <h2>Still stuck?</h2>
       <p class="lead">Email us and tell us what's going on &mdash; we'll get you back to holding the line.</p>
-      <p><a class="btn btn-blood" href="mailto:lherr9253@gmail.com?subject=Barricaded%20support">lherr9253@gmail.com</a></p>
+      <p><a class="btn btn-blood" href="mailto:support@nightshift-games.com?subject=Barricaded%20support">support@nightshift-games.com</a></p>
     </div>
   </section>
 </main>
@@ -134,5 +184,35 @@
     </nav>
   </div>
 </footer>
+<script>
+(function () {
+  var form = document.getElementById("report"), status = document.getElementById("status");
+  var opened = Date.now();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = new FormData(form), message = (f.get("message") || "").trim();
+    status.className = "status";
+    if (message.length < 10) { status.textContent = "Please write a little more about what happened."; status.classList.add("err"); return; }
+    var data = { topic: f.get("topic"), message: message, email: (f.get("email") || "").trim(), name: (f.get("name") || "").trim(),
+                 headset: f.get("headset") || "", website: f.get("website") || "", elapsed: Date.now() - opened };
+    var button = form.querySelector("button");
+    button.disabled = true; status.textContent = "Sending\u2026";
+    fetch("https://report.nightshift-games.com/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+      .then(function (r) {
+        if (r.ok) {
+          form.reset(); opened = Date.now();
+          status.textContent = data.email ? "Thanks \u2014 your report is in. We'll reply to " + data.email + "." : "Thanks \u2014 your report is in.";
+          status.classList.add("ok");
+        } else {
+          status.textContent = r.error || "Couldn't send that. Please email support@nightshift-games.com instead.";
+          status.classList.add("err");
+        }
+      })
+      .catch(function () { status.textContent = "Couldn't reach us. Please email support@nightshift-games.com instead."; status.classList.add("err"); })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
