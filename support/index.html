@@ -13,13 +13,6 @@
 <link rel="stylesheet" href="../assets/site.css">
 <style>
   .help h3 { margin-top: 0; }
-  details { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 0; margin: 0 0 12px; }
-  summary { cursor: pointer; padding: 18px 22px; font-weight: 600; color: var(--text); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; color: var(--blood-hi); font-weight: 700; font-size: 20px; line-height: 1; }
-  details[open] summary::after { content: "\2212"; }
-  details .a { padding: 0 22px 18px; color: var(--dim); }
-  details .a p:last-child { margin-bottom: 0; }
   .support-split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; align-items: start; }
   .support-split .side { display: grid; gap: 20px; }
   #report label { display: block; margin: 0 0 16px; font-weight: 600; font-size: 15px; color: var(--text); }
@@ -48,7 +41,6 @@
     <nav class="nav">
       <a href="../barricaded/">Barricaded</a>
       <a href="./" class="on">Support</a>
-      <a href="#faq">FAQ</a>
       <a href="../#contact" class="hide-sm">Contact</a>
     </nav>
   </div>
@@ -61,6 +53,7 @@
       <h2>How can we help?</h2>
       <p class="lead">Stuck, found a bug, or something's not working the way it should? Get in touch &mdash; a real person reads every message, usually within two business days.</p>
 
+      <p style="margin-top:6px">Playing <strong>Barricaded</strong>? Many answers are in the <a href="../barricaded/faq/">Barricaded FAQ</a>.</p>
       <div class="support-split" style="margin-top:28px">
         <form id="report" class="card" novalidate>
           <div class="k">Send us a report</div>
@@ -115,53 +108,6 @@
         </div>
       </div>
       <p style="margin-top:18px;color:var(--faint);font-size:15px">Running a VR arcade? <a href="../barricaded/#arcades">See arcade hosting</a>. Refunds and purchases are handled by the Meta Horizon Store.</p>
-    </div>
-  </section>
-
-  <section class="alt" id="faq">
-    <div class="wrap" style="max-width:860px">
-      <div class="eyebrow">FAQ</div>
-      <h2>Quick answers</h2>
-
-      <details>
-        <summary>The walls or windows don't line up with my room.</summary>
-        <div class="a"><p>Barricaded builds its battlefield from your headset's room scan. Re-run <strong>Space Setup</strong> in your headset's settings (under Physical Space), making sure every wall, the floor and the ceiling are captured, then restart the game. Scanning in good light helps.</p></div>
-      </details>
-
-      <details>
-        <summary>How much space do I need?</summary>
-        <div class="a"><p>Play in a room you've scanned and cleared of anything you could trip over or hit. You'll be moving, turning and swinging your arms, so the more open floor the better. For the Outdoor mode, use a safe, level, private outdoor space. See the safety section of our <a href="../barricaded/terms/">Terms of Service</a>.</p></div>
-      </details>
-
-      <details>
-        <summary>How do I play co-op with friends?</summary>
-        <div class="a"><p>Everyone needs to be in the same physical space and on the same Wi-Fi. On the <strong>PLAY</strong> page, use the co-op box: one player hosts, the others join the nearby game, then follow the steps to line up so everyone's room matches.</p></div>
-      </details>
-
-      <details>
-        <summary>Reloading is too hard / too easy.</summary>
-        <div class="a"><p>Change <strong>Reloading Difficulty</strong> in the menu's settings. The easiest setting reloads almost by itself; the harder ones make you handle every magazine yourself.</p></div>
-      </details>
-
-      <details>
-        <summary>Can I replay the tutorial?</summary>
-        <div class="a"><p>Yes &mdash; press <strong>TUTORIAL</strong> on the main menu at any time.</p></div>
-      </details>
-
-      <details>
-        <summary>My score isn't on the leaderboard.</summary>
-        <div class="a"><p>Leaderboards need you to be online and signed in to your Meta account. Scores are posted when a match ends. Tutorial matches, matches where cheats were used, and scores that look impossible aren't counted.</p></div>
-      </details>
-
-      <details>
-        <summary>How do I get a refund?</summary>
-        <div class="a"><p>Purchases and refunds go through the Meta Horizon Store under Meta's refund policy. You can request one from your Meta account's purchase history.</p></div>
-      </details>
-
-      <details>
-        <summary>How do I delete my data?</summary>
-        <div class="a"><p>Uninstalling the game removes everything it saved on your headset. To have your leaderboard entries deleted, <a href="mailto:support@nightshift-games.com?subject=Barricaded%20data%20request">email us</a> with your Meta username. More in our <a href="../barricaded/privacy/">Privacy Policy</a>.</p></div>
-      </details>
     </div>
   </section>
 
