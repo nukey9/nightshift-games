@@ -30,13 +30,13 @@
 and the choices you have. Barricaded is made by Levi Herr, doing business as Night Shift Games, in Wisconsin, USA
 ("we", "us"). If you have any questions, email <a href="mailto:contact@nightshift-games.com">contact@nightshift-games.com</a>.</p>
 
-<p>In short: the game doesn't send your information to any servers of ours, we don't sell it, and we don't use it for advertising.
-The only information that leaves your headset for the internet is your score data, which goes to Meta's leaderboard service.</p>
+<p>In short: we don't sell your information and we don't use it for advertising. The only information that leaves your headset
+for the internet is your match results, which go to our score server so they can be checked and placed on Meta's leaderboards.</p>
 
 <h2>Information we get from Meta</h2>
 <p>When you play with your Meta account, the game uses Meta's platform to get:</p>
 <ul>
-  <li><strong>Your user ID</strong>: an ID Meta gives you for this game only. We use it to find your entries on the game's leaderboards and to show your player profile.</li>
+  <li><strong>Your user ID</strong>: an ID Meta gives you for this game only. We use it to keep your leaderboard entries and standing, and to show your player profile.</li>
   <li><strong>Your username and display name</strong>: shown next to your scores on the leaderboards and on your in-game player profile.</li>
 </ul>
 <p>Meta also makes your profile photo available to games. Barricaded does not use it. We don't use your friends list or any other Meta account information.</p>
@@ -48,8 +48,19 @@ The only information that leaves your headset for the internet is your score dat
   <li>your total points, games played, kills, most kills in one match, and time played;</li>
   <li>how many kills you got with each weapon (used to show your favourite gun).</li>
 </ul>
-<p>This information is saved in a file on your headset. When you play signed in to Meta, it is also sent to <strong>Meta's leaderboard service</strong>
-together with your user ID. Your display name, scores and these stats are shown to other players of Barricaded on the in-game leaderboards and player profiles.</p>
+<p>This information is saved in a file on your headset. Your display name, scores and these stats are shown to other players of
+Barricaded on the in-game leaderboards and player profiles.</p>
+
+<h2>Leaderboards and fair play</h2>
+<p>To keep the leaderboards fair, the game doesn't post scores itself. When you play signed in to Meta, after each match it sends
+the match result (score, wave, kills, time, the weapons you used, whether you played alone or with others) and your level to our
+<strong>score server</strong>, together with your user ID and two proofs issued by Meta: one confirming which Meta account is
+playing, and one confirming that the game is a genuine, unmodified copy running on a real Meta Quest (Meta's device and app
+integrity check). Matches played offline are sent the next time you're online.</p>
+<p>Our score server checks the proofs with Meta, checks the match could really have been played, and then writes your entries to
+<strong>Meta's leaderboard service</strong>. It keeps a running record of your standing in each mode (games, scores, kills, time
+played, your top weapons and your level) so the all-time totals can't be tampered with. It doesn't keep the proofs. The score
+server runs on <strong>Cloudflare</strong>.</p>
 
 <h2>Your room and your headset</h2>
 <ul>
@@ -84,17 +95,17 @@ receives your IP address when it delivers them.</p>
 
 <h2>Sharing</h2>
 <p>We don't sell or rent your information, and we don't share it with anyone except as described above: Meta, which runs the
-leaderboards; Cloudflare, which delivers our website and email; and other players, who can see leaderboard names, scores and stats. We would only disclose information if the law required it.</p>
+leaderboards; Cloudflare, which runs our score server, website and email; and other players, who can see leaderboard names, scores and stats. We would only disclose information if the law required it.</p>
 
 <h2>How long information is kept</h2>
 <ul>
   <li>Game information on your headset stays there until you uninstall the game or clear its data.</li>
-  <li>Leaderboard entries are kept by Meta's leaderboard service for as long as the game's leaderboards exist, or until you ask us to delete them.</li>
+  <li>Leaderboard entries, and the standing our score server keeps for them, are kept for as long as the game's leaderboards exist, or until you ask us to delete them.</li>
 </ul>
 
 <h2>Your choices and rights</h2>
 <ul>
-  <li><strong>Delete your leaderboard entries.</strong> Email us from any address, with your Meta username, and we will delete your entries from the game's leaderboards.</li>
+  <li><strong>Delete your leaderboard entries.</strong> Email us from any address, with your Meta username, and we will delete your entries from the game's leaderboards and the standing our score server keeps.</li>
   <li><strong>See or correct your information.</strong> Your scores and stats are shown in the game. Email us with any question about the information we hold.</li>
   <li>Uninstalling the game removes everything it saved on your headset.</li>
   <li>You can manage your Meta account, username and privacy settings in Meta's own apps and settings.</li>
@@ -106,7 +117,7 @@ leaderboards; Cloudflare, which delivers our website and email; and other player
 If you believe a child under 13 has used the game with an account, email us and we'll delete their leaderboard entries.</p>
 
 <h2>Security</h2>
-<p>Information sent to the leaderboards travels to Meta through Meta's platform software. We don't keep your information on servers of our own.</p>
+<p>Match results travel to our score server over an encrypted (HTTPS) connection, and from there to Meta's leaderboard service. Our score server keeps only your leaderboard standing, described above.</p>
 
 <h2>Changes to this policy</h2>
 <p>If the game starts using new information (for example online invites, friends or in-game purchases), we will update this policy before
