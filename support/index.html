@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support &mdash; Night Shift Games</title>
+<meta name="description" content="Help and support for Barricaded Mixed Reality: contact us, report a bug, and answers to common questions.">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .help h3 { margin-top: 0; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 0; margin: 0 0 12px; }
+  summary { cursor: pointer; padding: 18px 22px; font-weight: 600; color: var(--text); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--blood-hi); font-weight: 700; font-size: 20px; line-height: 1; }
+  details[open] summary::after { content: "\2212"; }
+  details .a { padding: 0 22px 18px; color: var(--dim); }
+  details .a p:last-child { margin-bottom: 0; }
+  .contact-cards .card { display: flex; flex-direction: column; }
+  .contact-cards .card .btn { margin-top: auto; align-self: flex-start; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../">Night Shift Games</a>
+    <nav class="nav">
+      <a href="../barricaded/">Barricaded</a>
+      <a href="./" class="on">Support</a>
+      <a href="../#contact" class="hide-sm">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section style="padding-bottom:48px">
+    <div class="wrap">
+      <div class="eyebrow">Support</div>
+      <h2>How can we help?</h2>
+      <p class="lead">Stuck, found a bug, or something's not working the way it should? Get in touch &mdash; a real person reads every message, usually within two business days.</p>
+
+      <div class="grid grid-3 contact-cards" style="margin-top:28px">
+        <div class="card">
+          <div class="k">Email support</div>
+          <h3>Ask us anything</h3>
+          <p>Questions about the game, your account, leaderboards or your data.</p>
+          <a class="btn btn-blood" href="mailto:contact@nightshift-games.com?subject=Barricaded%20support">Email support</a>
+        </div>
+        <div class="card">
+          <div class="k">Report a bug</div>
+          <h3>Something broke?</h3>
+          <p>Tell us what happened, and we'll fix it. Screenshots or a short headset recording help a lot.</p>
+          <a class="btn btn-ghost" href="mailto:contact@nightshift-games.com?subject=Barricaded%20bug%20report&amp;body=What%20happened%3A%0A%0AWhat%20you%20were%20doing%20just%20before%3A%0A%0AHeadset%20(Quest%203%20%2F%203S%20%2F%20other)%3A%0A%0AMode%20(Room%20%2F%20Outdoor%2C%20solo%20%2F%20co-op)%3A%0A%0ADoes%20it%20happen%20every%20time%3F%0A">Report a bug</a>
+        </div>
+        <div class="card">
+          <div class="k">Data requests</div>
+          <h3>Your information</h3>
+          <p>Ask to see or delete your leaderboard entries. Include your Meta username.</p>
+          <a class="btn btn-ghost" href="mailto:contact@nightshift-games.com?subject=Barricaded%20data%20request">Send a request</a>
+        </div>
+      </div>
+      <p style="margin-top:18px;color:var(--faint);font-size:15px">Running a VR arcade? <a href="../barricaded/#arcades">See arcade hosting</a>. Refunds and purchases are handled by the Meta Horizon Store.</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap" style="max-width:860px">
+      <div class="eyebrow">Common questions</div>
+      <h2>Quick answers</h2>
+
+      <details>
+        <summary>The walls or windows don't line up with my room.</summary>
+        <div class="a"><p>Barricaded builds its battlefield from your headset's room scan. Re-run <strong>Space Setup</strong> in your headset's settings (under Physical Space), making sure every wall, the floor and the ceiling are captured, then restart the game. Scanning in good light helps.</p></div>
+      </details>
+
+      <details>
+        <summary>How much space do I need?</summary>
+        <div class="a"><p>Play in a room you've scanned and cleared of anything you could trip over or hit. You'll be moving, turning and swinging your arms, so the more open floor the better. For the Outdoor mode, use a safe, level, private outdoor space. See the safety section of our <a href="../barricaded/terms/">Terms of Service</a>.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I play co-op with friends?</summary>
+        <div class="a"><p>Everyone needs to be in the same physical space and on the same Wi-Fi. On the <strong>PLAY</strong> page, use the co-op box: one player hosts, the others join the nearby game, then follow the steps to line up so everyone's room matches.</p></div>
+      </details>
+
+      <details>
+        <summary>Reloading is too hard / too easy.</summary>
+        <div class="a"><p>Change <strong>Reloading Difficulty</strong> in the menu's settings. The easiest setting reloads almost by itself; the harder ones make you handle every magazine yourself.</p></div>
+      </details>
+
+      <details>
+        <summary>Can I replay the tutorial?</summary>
+        <div class="a"><p>Yes &mdash; press <strong>TUTORIAL</strong> on the main menu at any time.</p></div>
+      </details>
+
+      <details>
+        <summary>My score isn't on the leaderboard.</summary>
+        <div class="a"><p>Leaderboards need you to be online and signed in to your Meta account. Scores are posted when a match ends. Tutorial matches, matches where cheats were used, and scores that look impossible aren't counted.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I get a refund?</summary>
+        <div class="a"><p>Purchases and refunds go through the Meta Horizon Store under Meta's refund policy. You can request one from your Meta account's purchase history.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I delete my data?</summary>
+        <div class="a"><p>Uninstalling the game removes everything it saved on your headset. To have your leaderboard entries deleted, <a href="mailto:contact@nightshift-games.com?subject=Barricaded%20data%20request">email us</a> with your Meta username. More in our <a href="../barricaded/privacy/">Privacy Policy</a>.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="center">
+    <div class="wrap">
+      <h2>Still stuck?</h2>
+      <p class="lead">Email us and tell us what's going on &mdash; we'll get you back to holding the line.</p>
+      <p><a class="btn btn-blood" href="mailto:contact@nightshift-games.com?subject=Barricaded%20support">contact@nightshift-games.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>&copy; 2026 Night Shift Games &middot; Wisconsin, USA</div>
+    <nav>
+      <a href="../">Night Shift Games</a>
+      <a href="../barricaded/">Barricaded</a>
+      <a href="../barricaded/privacy/">Privacy policy</a>
+      <a href="../barricaded/terms/">Terms of service</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
