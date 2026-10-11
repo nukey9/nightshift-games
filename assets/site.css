@@ -58,7 +58,7 @@ p { margin: 0 0 1em; color: var(--dim); }
 }
 
 /* Sections */
-section { padding: 88px 0; }
+section { padding: 88px 0; scroll-margin-top: 64px; }
 .alt { background: linear-gradient(180deg, var(--panel), var(--bg)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .center { text-align: center; }
 .lead { font-size: 19px; color: var(--dim); max-width: 760px; }
