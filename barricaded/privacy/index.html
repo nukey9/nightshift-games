@@ -24,14 +24,15 @@
 </header>
 <main class="doc">
 <h1>Barricaded Mixed Reality Privacy Policy</h1>
-<p class="meta">Effective October 11, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
+<p class="meta">Effective October 12, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
 
 <p>This policy explains what information <strong>Barricaded Mixed Reality</strong> ("Barricaded"), a mixed reality game for Meta Quest, uses, why it uses it,
 and the choices you have. Barricaded is made by Night Shift Games, in Wisconsin, USA
 ("we", "us"). If you have any questions, email <a href="mailto:contact@nightshift-games.com">contact@nightshift-games.com</a>.</p>
 
 <p>In short: we don't sell your information and we don't use it for advertising. The only information that leaves your headset
-for the internet is your match results, which go to our score server so they can be checked and placed on Meta's leaderboards.</p>
+for the internet is your match results, which go to our score server so they can be checked and placed on Meta's leaderboards,
+and, when you play co-op, a spatial anchor shared through Meta so the headsets in the room can line up with each other.</p>
 
 <h2>Information we get from Meta</h2>
 <p>When you play with your Meta account, the game uses Meta's platform to get:</p>
@@ -60,19 +61,29 @@ playing, and one confirming that the game is a genuine, unmodified copy running 
 integrity check). Matches played offline are sent the next time you're online.</p>
 <p>Our score server checks the proofs with Meta, checks the match could really have been played, and then writes your entries to
 <strong>Meta's leaderboard service</strong>. It keeps a running record of your standing in each mode (games, scores, kills, time
-played, your top weapons and your level) so the all-time totals can't be tampered with. It doesn't keep the proofs. The score
+played, your top weapons and your level) so the all-time totals can't be tampered with. It doesn't keep the proofs. Like any
+internet service, it receives your IP address when the game connects to it, to answer. The score
 server runs on <strong>Cloudflare</strong>.</p>
 
 <h2>Your room and your headset</h2>
 <ul>
   <li><strong>Room scan.</strong> Barricaded is a mixed reality game. It uses the room layout from your headset's own Space Setup
-    (walls and floor) to fit the game to your room. This stays on your headset and is never sent to us.
-    We don't access camera images.</li>
+    (walls, floor, doors, windows and furniture) to fit the game to your room. It is never sent to us. When you play co-op, the
+    hosting headset shares its room's outline with the other headsets in the game (see below). We don't access camera images.</li>
   <li><strong>Play together on the same Wi-Fi.</strong> If you play co-op with other headsets in the same room, the headsets talk directly
     to each other over your local network. They share what is needed to play together: each headset's model and an identifier for it,
-    your name (your Meta display name, or your headset's name if you aren't signed in to Meta), the outline of the shared room,
-    and live game information such as player positions and scores.
+    your name (your Meta display name, or your headset's name if you aren't signed in to Meta), the outline of the shared room
+    (walls, doors, windows and furniture), and live game information such as player positions and scores.
     This doesn't go over the internet and isn't sent to us.</li>
+  <li><strong>Finding headsets nearby.</strong> While the game's main menu is open (or while you host a game), it announces itself
+    on your local network so headsets nearby can find each other and be invited: your name, your headset's model, what you're
+    doing in the game (for example "hosting" or "in a match"), and a random identifier made for this purpose when the game is
+    installed. Anyone on the same local network can see this while the menu is open. You join another player's game only if you
+    accept their invite.</li>
+  <li><strong>Lining headsets up (co-op).</strong> To line the headsets up in the same room, the hosting headset places a spatial
+    anchor where you stand and shares it through Meta's shared spatial anchors service, which stores it on Meta's servers so the
+    other headsets in the game can load it. This needs your headset's Enhanced Spatial Services setting to be on; if it is off,
+    headsets line up by touching the same two spots instead, and nothing is shared through Meta.</li>
   <li><strong>Head and hand tracking</strong> are used only to play the game, on your headset. We don't record or keep them.</li>
   <li>The game doesn't use your microphone, camera images, location or contacts.</li>
 </ul>
