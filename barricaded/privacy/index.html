@@ -24,7 +24,7 @@
 </header>
 <main class="doc">
 <h1>Barricaded Mixed Reality Privacy Policy</h1>
-<p class="meta">Effective October 15, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
+<p class="meta">Effective October 16, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
 
 <p>This policy explains what information <strong>Barricaded Mixed Reality</strong> ("Barricaded"), a mixed reality game for Meta Quest, uses, why it uses it,
 and the choices you have. Barricaded is made by Levi Herr, doing business as Night Shift Games, in Wisconsin, USA
@@ -79,7 +79,8 @@ server runs on <strong>Cloudflare</strong>.</p>
 <ul>
   <li><strong>Room scan.</strong> Barricaded is a mixed reality game. It uses the room layout from your headset's own Space Setup
     (walls, floor, doors, windows and furniture) to fit the game to your room. It is never sent to us. When you play co-op, the
-    hosting headset shares its room's outline with the other headsets in the game (see below). We don't access camera images.</li>
+    hosting headset shares its room's outline with the other headsets in the game (see below). The game never receives camera
+    images (see "Line-up QR codes" below).</li>
   <li><strong>Play together on the same Wi-Fi.</strong> If you play co-op with other headsets in the same room, the headsets talk directly
     to each other over your local network. They share what is needed to play together: each headset's model and an identifier for it,
     which version of the game it runs (so headsets with different versions aren't joined together),
@@ -94,7 +95,20 @@ server runs on <strong>Cloudflare</strong>.</p>
   <li><strong>Lining headsets up (co-op).</strong> To line the headsets up in the same room, the hosting headset places a spatial
     anchor where you stand and shares it through Meta's shared spatial anchors service, which stores it on Meta's servers so the
     other headsets in the game can load it. This needs your headset's Enhanced Spatial Services setting to be on; if it is off,
-    headsets line up by touching the same two spots instead, and nothing is shared through Meta.</li>
+    headsets line up another way (below), and nothing is shared through Meta.</li>
+  <li><strong>Saved line-ups (co-op).</strong> So headsets that have played together in a room line up again without the internet,
+    each headset saves spatial anchors on the headset itself: the hosting headset saves its room's anchor, and a joining headset
+    saves one of its own next to it, with where the two stand from each other and the host's anchor's identifier. These are kept
+    only on the headset (through Meta's on-device spatial anchor storage), are never sent over the internet or to us, and are
+    erased when you use Clear anchors or uninstall the game. When headsets play together, only the host's anchor identifier and
+    where it stands in the room are shared, over your local network.</li>
+  <li><strong>Line-up QR codes (co-op).</strong> If you choose to line up by a printed Barricaded QR code, your headset's own QR code
+    tracking reads the code. The game is told only where the code is in your room and what it says (a link to our website with a
+    letter). It never receives camera images, and nothing about the code is sent over the internet or to us; the hosting headset
+    shares where the code is with the other headsets in the game over your local network. Your headset reads codes only while you
+    are lining up by one, and it needs the game's Spatial Data permission.</li>
+  <li><strong>Lining up by touch.</strong> Headsets can also line up by touching the same two spots; where the host touched them is
+    shared with the other headsets over your local network.</li>
   <li><strong>Head and hand tracking</strong> are used only to play the game, on your headset. We don't record or keep them.</li>
   <li>The game doesn't use your microphone, camera images, location or contacts.</li>
 </ul>
