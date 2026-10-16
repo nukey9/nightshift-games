@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barricaded line-up code &mdash; Night Shift Games</title>
+<meta name="description" content="This QR code lines up headsets for co-op in Barricaded Mixed Reality. Print one, put it flat on the floor or on a wall of your play room, and every headset lines up by looking at it.">
+<link rel="icon" href="../../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<style>
+  .found { background: var(--panel); border: 1px solid var(--blood); border-radius: var(--radius); padding: 22px 24px; margin: 0 0 28px; display: none; }
+  .found.on { display: block; }
+  .found h2 { margin: 0 0 8px; border: 0; padding: 0; }
+  .picker { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 22px; }
+  .picker button { font: 600 15px/1 "Inter", sans-serif; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px; cursor: pointer; }
+  .picker button.on { border-color: var(--blood-hi); color: var(--blood-hi); }
+  .preview { background: #fff; border-radius: var(--radius); padding: 22px; max-width: 360px; margin: 0 0 18px; }
+  .preview img { display: block; width: 100%; height: auto; }
+  .preview p { color: #222; font: 500 13px/1.4 "Inter", sans-serif; margin: 12px 0 0; text-align: center; }
+  ol.steps { padding-left: 22px; color: var(--dim); }
+  ol.steps li { margin: 8px 0; }
+  /* The printed sheet: only the code, at its real size. */
+  #sheet { display: none; }
+  @media print {
+    @page { size: auto; margin: 12mm; }
+    body { background: #fff !important; }
+    header.top, footer.foot, main > *:not(#sheet) { display: none !important; }
+    #sheet { display: block; color: #000; font-family: Arial, sans-serif; text-align: center; }
+    #sheet .code { width: 180mm; height: 180mm; margin: 6mm auto 0; display: block; }
+    #sheet .code img { width: 180mm; height: 180mm; display: block; }
+    #sheet .ruler { width: 100mm; height: 3mm; border: 0.4mm solid #000; border-top: 0; margin: 8mm auto 1mm; }
+    #sheet .small { font-size: 10pt; margin: 2mm 0; }
+    #sheet h1 { font-size: 16pt; margin: 0 0 2mm; text-transform: none; color: #000; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../">Night Shift Games</a>
+    <nav class="nav">
+      <a href="../">Barricaded</a>
+      <a href="../guide/">Guide</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../../support/">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="found" id="found">
+    <h2>This is a Barricaded line-up code <span id="foundId"></span></h2>
+    <p>It lines headsets up for co-op in <strong>Barricaded Mixed Reality</strong>, a zombie survival game for Meta Quest 3 and 3S that plays in your real room. Leave it where it is &mdash; the players in this room line up by looking at it.</p>
+    <p><a class="btn btn-blood" href="../">About the game</a> <a class="btn btn-ghost" href="../guide/#lineup">How lining up works</a></p>
+  </div>
+
+  <h1>Line-up QR code</h1>
+  <p class="meta">Barricaded Mixed Reality &middot; co-op &middot; <a href="../guide/">Player guide</a></p>
+
+  <p>Playing together, every headset has to agree where your room is. Usually that happens by itself. When it doesn't &mdash; no internet, Enhanced Spatial Services off, or a room that isn't scanned on every headset &mdash; a printed code does it in a couple of seconds: each headset looks at the same code, and they're lined up. No internet, no touching.</p>
+  <p>It needs a <strong>Meta Quest 3 or 3S on Horizon OS v83 or later</strong>, and the game's <strong>Spatial Data</strong> permission. The headset reads the code itself; the game is only told where the code is and what it says &mdash; never a camera image. See our <a href="../privacy/">Privacy Policy</a>.</p>
+
+  <h2>Print a code</h2>
+  <p>Pick one. One code is enough for a room; use a different letter for each room (or each arena, at an arcade) so headsets never mix two codes up.</p>
+  <div class="picker" id="picker"></div>
+  <div class="preview"><img id="previewImg" src="lineup-A.svg" alt="Barricaded line-up QR code A"><p id="previewText">Code A</p></div>
+  <p><a class="btn btn-blood" href="#" id="printBtn">Print code <span id="printId">A</span></a></p>
+  <ol class="steps">
+    <li>Print at <strong>100% / Actual size</strong> (turn off &ldquo;Fit to page&rdquo;). The black square should measure <strong>18 cm</strong> across; the sheet has a 10 cm line to check your printer against.</li>
+    <li>Use plain, matte paper, and keep it flat &mdash; no folds, curls or glossy laminate that shines.</li>
+  </ol>
+
+  <h2>Put it in your room</h2>
+  <ol class="steps">
+    <li><strong>Flat on the floor</strong> (taped down at the corners) where nobody will step or trip on it, or <strong>flat on a wall</strong> at about chest height. Not on a door, and not anywhere it might move.</li>
+    <li>Somewhere well lit, in the room you play in.</li>
+    <li>Leave it there. The game remembers line-ups, so next time you may not even need it.</li>
+  </ol>
+
+  <h2>Line up with it</h2>
+  <ol class="steps">
+    <li>The host: <strong>PLAY</strong> page &rarr; co-op box &rarr; <strong>Read the QR code</strong>. Look at the code from a step or two away and hold still a moment until the game says it has read it.</li>
+    <li>Everyone else: once joined, <strong>Line up by QR code</strong> (on the PLAY page, or SETTINGS during a match). Look at the same code and hold still a moment &mdash; &ldquo;Lined up by the QR code&rdquo;.</li>
+    <li>That's it. The step-by-step version, with pictures, is in the <a href="../guide/#lineup">player guide</a>.</li>
+  </ol>
+
+  <div id="sheet">
+    <h1>Barricaded line-up code <span id="sheetId">A</span></h1>
+    <div class="small">Lay flat on the floor or on a wall of your play room &middot; nightshift-games.com/barricaded/lineup</div>
+    <div class="code"><img id="sheetImg" src="lineup-A.svg" alt=""></div>
+    <div class="ruler"></div>
+    <div class="small">This line should be 10 cm long. If it isn't, print again at 100% / Actual size.</div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>&copy; 2026 Night Shift Games &middot; Wisconsin, USA</div>
+    <nav>
+      <a href="../../">Night Shift Games</a>
+      <a href="../">Barricaded</a>
+      <a href="../guide/">Guide</a>
+      <a href="../privacy/">Privacy policy</a>
+      <a href="../terms/">Terms of service</a>
+      <a href="../credits/">Credits</a>
+      <a href="../../support/">Support</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function () {
+    var ids = ["A", "B", "C", "D", "E", "F"];
+    var asked = (new URLSearchParams(location.search).get("id") || "").toUpperCase();
+    var current = ids.indexOf(asked) >= 0 ? asked : "A";
+    if (asked) {
+      document.getElementById("found").className = "found on";
+      document.getElementById("foundId").textContent = ids.indexOf(asked) >= 0 ? asked : "";
+    }
+    var picker = document.getElementById("picker");
+    function show(id) {
+      current = id;
+      document.getElementById("previewImg").src = "lineup-" + id + ".svg";
+      document.getElementById("previewImg").alt = "Barricaded line-up QR code " + id;
+      document.getElementById("previewText").textContent = "Code " + id;
+      document.getElementById("sheetImg").src = "lineup-" + id + ".svg";
+      document.getElementById("sheetId").textContent = id;
+      document.getElementById("printId").textContent = id;
+      Array.prototype.forEach.call(picker.children, function (b) { b.className = b.textContent === "Code " + id ? "on" : ""; });
+    }
+    ids.forEach(function (id) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = "Code " + id;
+      b.onclick = function () { show(id); };
+      picker.appendChild(b);
+    });
+    document.getElementById("printBtn").onclick = function (e) { e.preventDefault(); window.print(); };
+    show(current);
+  })();
+</script>
+</body>
+</html>

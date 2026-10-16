@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barricaded player guide &mdash; Night Shift Games</title>
+<meta name="description" content="How to play Barricaded Mixed Reality: the core loop, points, wall buys, the mystery box, perks, upgrades, rounds and bosses, and lining up headsets for co-op by anchor, QR code or touch.">
+<link rel="icon" href="../../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<style>
+  .doc { max-width: 900px; }
+  .doc h3 { font: 700 17px/1.3 "Inter", sans-serif; color: var(--text); margin: 1.8em 0 0.5em; text-transform: none; letter-spacing: 0; }
+  .toc { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 24px; margin: 0 0 10px; }
+  .toc ol { margin: 0; padding-left: 20px; color: var(--dim); columns: 2; column-gap: 40px; }
+  .toc li { margin: 4px 0; break-inside: avoid; }
+  table.t { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 15px; }
+  table.t th, table.t td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.t th { color: var(--text); font-weight: 600; background: var(--panel); }
+  table.t td { color: var(--dim); }
+  table.t td.n { white-space: nowrap; color: var(--text); }
+  .fig { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; margin: 16px 0 22px; }
+  .fig svg { display: block; width: 100%; height: auto; }
+  .fig .cap { color: var(--faint); font-size: 14px; margin: 10px 0 0; text-align: center; }
+  .steps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 14px 0 22px; }
+  .step { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .step svg { display: block; width: 100%; height: auto; margin-bottom: 10px; }
+  .step .num { font: 700 12px/1 "Inter", sans-serif; letter-spacing: 0.18em; color: var(--blood-hi); text-transform: uppercase; margin-bottom: 6px; }
+  .step p { color: var(--dim); margin: 0; font-size: 15px; }
+  .note { border-left: 3px solid var(--blood); background: var(--panel); padding: 12px 16px; border-radius: 0 10px 10px 0; color: var(--dim); margin: 14px 0; }
+  .pack { color: var(--amber); font-weight: 600; }
+  @media (max-width: 700px) { .toc ol { columns: 1; } .steps-grid { grid-template-columns: 1fr; } table.t { font-size: 14px; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../">Night Shift Games</a>
+    <nav class="nav">
+      <a href="../">Barricaded</a>
+      <a href="./" class="on">Guide</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../../support/">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="eyebrow">Barricaded Mixed Reality</div>
+  <h1>Player guide</h1>
+  <p class="meta">How to play, what to buy, and how to line up for co-op &middot; <a href="../">Back to Barricaded</a></p>
+
+  <div class="toc">
+    <ol>
+      <li><a href="#game">The game</a></li>
+      <li><a href="#start">Before you play</a></li>
+      <li><a href="#loop">The core loop</a></li>
+      <li><a href="#rounds">Rounds, breaks and bosses</a></li>
+      <li><a href="#points">Earning points</a></li>
+      <li><a href="#buy">What to buy</a></li>
+      <li><a href="#upgrade">Power, perks and upgrades</a></li>
+      <li><a href="#gear">Your belt, grenades and drops</a></li>
+      <li><a href="#down">Going down and reviving</a></li>
+      <li><a href="#progress">Levels, scores and the Supporter Pack</a></li>
+      <li><a href="#coop">Playing together</a></li>
+      <li><a href="#lineup">Lining up headsets</a></li>
+    </ol>
+  </div>
+
+  <!-- ======================================================================================= -->
+  <h2 id="game">1. The game</h2>
+  <p>Barricaded is a round-based zombie survival game for <strong>Meta Quest 3 and 3S</strong> that plays in <strong>your real room</strong>. The game reads your headset's room scan, turns your doors and windows into barricaded ways in, and opens a ruined world beyond your walls. Zombies come through the windows, break through the walls, and get faster and tougher every round. You hold them off with real-handed guns &mdash; loading, racking and reloading them yourself &mdash; and spend the points you earn on better weapons, perks and upgrades.</p>
+  <ul>
+    <li><strong>Your Room</strong> &mdash; the room you stand in (or, with <strong>Multi-room</strong> on, every scanned room joined to it by a door, each bought open COD-style).</li>
+    <li><strong>Outdoor Arena</strong> &mdash; a fenced arena set out on open ground (6&ndash;15 m a side, 12&times;12 m by default, in four sections you buy open). No room scan needed.</li>
+    <li><strong>Co-op</strong> &mdash; two players free, up to four when the host has the Supporter Pack, all in the same physical space and on the same Wi-Fi.</li>
+  </ul>
+  <p>Clear your play space of anything you could trip over or hit. See the safety section of our <a href="../terms/">Terms of Service</a>.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="start">2. Before you play</h2>
+  <h3>Room scan and permission</h3>
+  <p>For <strong>Your Room</strong> the headset needs a room scan (<strong>Space Setup</strong>) and the game needs your <strong>Spatial Data</strong> permission. The <strong>PLAY</strong> page's start button tells you what's missing: <strong>Allow Room Access</strong> (the permission was refused &mdash; or turn it on in Settings &gt; Privacy &amp; Safety &gt; App Permissions &gt; Spatial Data), or <strong>Scan My Room</strong> (opens Space Setup). Capture every wall, door, window, the floor and the ceiling. The Outdoor Arena needs neither.</p>
+  <h3>The menu</h3>
+  <p>Press the <strong>menu button on the left controller</strong> to open or close it. Tabs: <strong>PLAY</strong> (start a game, co-op), <strong>LOADOUT</strong> (the gunsmith: fit attachments, between games), <strong>SETTINGS</strong>, <strong>GRAPHICS</strong>, <strong>SCORES</strong>, <strong>ACCOUNT</strong> and <strong>SUPPORT</strong>. During a match SETTINGS has <strong>Restart</strong> and <strong>Stop Game</strong>.</p>
+  <h3>Tutorial and practice</h3>
+  <p>The tutorial is offered the first time, and <strong>TUTORIAL</strong> on the PLAY page replays it: drawing, shooting, reloading, racking, holstering, shoving, boarding a window, buying, and getting back up. You can't be hurt in it. Between matches, a firing range outside your window has one of every enemy standing still to practise on.</p>
+  <h3>Reload difficulty</h3>
+  <table class="t">
+    <tr><th>Setting</th><th>How reloading works</th><th>In return</th></tr>
+    <tr><td class="n">Very Easy</td><td>Bring the gun to your belt and it reloads and racks itself.</td><td>120 health</td></tr>
+    <tr><td class="n">Easy (default)</td><td>Empty magazines drop out by themselves; touch the magazine well to a magazine on your belt.</td><td>120 health</td></tr>
+    <tr><td class="n">Semi-manual</td><td>Drop the magazine yourself and take a new one from your belt by hand.</td><td>150 health, more spare ammo, prices &times;0.95</td></tr>
+    <tr><td class="n">Full manual</td><td>As semi-manual, and push the magazine up until it locks.</td><td>175 health, most spare ammo, prices &times;0.9</td></tr>
+  </table>
+
+  <!-- ======================================================================================= -->
+  <h2 id="loop">3. The core loop</h2>
+  <div class="fig">
+    <svg viewBox="0 0 860 330" role="img" aria-label="The core loop: survive the round, earn points, spend them, break, next round">
+      <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff3b3b"/></marker></defs>
+      <g font-family="Inter, sans-serif" text-anchor="middle">
+        <rect x="330" y="18" width="200" height="74" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="430" y="50" fill="#fff" font-size="19" font-weight="700">1. SURVIVE</text>
+        <text x="430" y="73" fill="#9aa0ad" font-size="13">zombies come in each round</text>
+        <rect x="630" y="128" width="210" height="74" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="735" y="160" fill="#fff" font-size="19" font-weight="700">2. EARN</text>
+        <text x="735" y="183" fill="#9aa0ad" font-size="13">hits, kills, boarding, revives</text>
+        <rect x="330" y="238" width="200" height="74" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="430" y="270" fill="#fff" font-size="19" font-weight="700">3. SPEND</text>
+        <text x="430" y="293" fill="#9aa0ad" font-size="13">guns, box, perks, doors</text>
+        <rect x="20" y="128" width="210" height="74" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="125" y="160" fill="#fff" font-size="19" font-weight="700">4. BREATHE</text>
+        <text x="125" y="183" fill="#9aa0ad" font-size="13">board up, upgrade at breaks</text>
+        <path d="M532,60 C620,70 690,95 720,124" fill="none" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar)"/>
+        <path d="M720,206 C690,240 620,268 534,276" fill="none" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar)"/>
+        <path d="M328,276 C240,268 170,240 140,206" fill="none" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar)"/>
+        <path d="M140,124 C170,95 240,70 326,60" fill="none" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar)"/>
+        <text x="430" y="170" fill="#ffb347" font-size="15" font-weight="600">each round: more, faster, tougher</text>
+        <text x="430" y="192" fill="#9aa0ad" font-size="13">every 5th round: beasts &middot; every 10th: bosses</text>
+      </g>
+    </svg>
+    <p class="cap">Round after round: the points you earn buy what keeps you alive in the next one.</p>
+  </div>
+  <ol>
+    <li><strong>Start</strong> with only the M9A1 pistol. Grenades refill a little each round.</li>
+    <li><strong>Hold the ways in.</strong> Zombies tear the planks off your windows and climb in, or smash through a wall. Every hit pays, and kills pay more.</li>
+    <li><strong>Board up</strong> between attackers: grab a plank from the pile under a broken window and hold it in place for 2 seconds. Planks you nail where a zombie broke in pay too.</li>
+    <li><strong>Spend early, spend often.</strong> A better gun from the wall rack in round 2&ndash;3 makes rounds 4&ndash;8 far easier. Then roll the mystery box for something better.</li>
+    <li><strong>Start the generator</strong> &mdash; nothing else in the power line works without it &mdash; then buy perks: Toughness and Firepower first.</li>
+    <li><strong>Upgrade</strong> your best gun at the upgrade breaks (after rounds 9, 19, 29 &hellip;).</li>
+    <li><strong>Survive the specials</strong>: crawlers in round 5, bosses in round 10, hellhounds in round 15 &hellip;</li>
+  </ol>
+
+  <!-- ======================================================================================= -->
+  <h2 id="rounds">4. Rounds, breaks and bosses</h2>
+  <ul>
+    <li><strong>Zombies per round</strong> (per player in co-op): 6 in round 1, 8 in round 2, 11, 13, 16 &hellip; 28 by round 10. Up to 6 are about at once in round 1, one more each round, never more than 12.</li>
+    <li><strong>They get harder</strong>: about 10% more health every round to round 10, then 10% on top of that each round (up to 25&times;). Their hits grow from 30 to 40 damage by round 20, and they're at full speed by round 15.</li>
+    <li><strong>Short pauses</strong> of 5&ndash;8 seconds between rounds; a <strong>break</strong> of up to 2 minutes after every 5th round; an <strong>upgrade break</strong> of up to 3 minutes after rounds 9, 19, 29 &hellip;; and a break before every hellhound round. Any player can press <strong>Continue</strong> to start the next round early.</li>
+  </ul>
+  <table class="t">
+    <tr><th>Round</th><th>What comes</th></tr>
+    <tr><td class="n">5, 25, 45 &hellip;</td><td><strong>Skitters</strong> &mdash; crawlers that come in low and fast.</td></tr>
+    <tr><td class="n">10, 20, 30 &hellip;</td><td><strong>Bosses</strong>, after a normal round's zombies: the <strong>Belcher</strong> (4&times; health, 60 damage) and the <strong>Sporehusk</strong> (6&times; health). 1 in round 10, 2 in round 20, 3 from round 30 (more in co-op). They break in through the walls. 250 points each.</td></tr>
+    <tr><td class="n">15, 35, 55 &hellip;</td><td><strong>Hellhounds</strong> &mdash; 15 per player in the first hound round, 4 more each time, in packs. Weaker than zombies, but fast.</td></tr>
+  </table>
+  <p>The last enemy of a crawler or hound round always drops a <strong>Full Ammo</strong>.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="points">5. Earning points</h2>
+  <table class="t">
+    <tr><th>What</th><th>Points</th></tr>
+    <tr><td>Every hit that does damage (each shotgun pellet counts)</td><td class="n">10</td></tr>
+    <tr><td>A kill, on top of the hits</td><td class="n">30</td></tr>
+    <tr><td>A head-shot kill (instead of the 30)</td><td class="n">20</td></tr>
+    <tr><td>A melee kill</td><td class="n">60</td></tr>
+    <tr><td>A boss kill</td><td class="n">250</td></tr>
+    <tr><td>A plank nailed where a zombie broke in (up to 100 a round)</td><td class="n">10</td></tr>
+    <tr><td>Reviving a teammate (first two each round)</td><td class="n">50</td></tr>
+  </table>
+  <p class="note">Body hits before the kill pay more than a quick head shot &mdash; the classic trick is to hit a zombie a few times, then finish it. Your <strong>score</strong> (for the leaderboards) counts everything you earned; your <strong>points</strong> are what's left to spend.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="buy">6. What to buy</h2>
+  <p>Hold <strong>grip</strong> on anything for sale to buy it. Prices are the same every round; harder reload settings make everything a little cheaper, and an outdoor arena with sections off costs half again.</p>
+  <h3>The wall rack</h3>
+  <p>Hold grip on a gun on the wall to buy it. If you already carry it, the same buys you a full refill of ammo. An upgraded gun's ammo costs more.</p>
+  <table class="t">
+    <tr><th>Weapon</th><th>Gun</th><th>Ammo</th><th>Ammo when upgraded (1 / 2 / 3)</th></tr>
+    <tr><td>M9A1 (your starting pistol)</td><td class="n">&mdash;</td><td class="n">100</td><td>700 / 900 / 1200</td></tr>
+    <tr><td>P250</td><td class="n">200</td><td class="n">110</td><td>800 / 1000 / 1400</td></tr>
+    <tr><td>MP40</td><td class="n">400</td><td class="n">120</td><td>750 / 1000 / 1250</td></tr>
+    <tr><td>Remington 870</td><td class="n">500</td><td class="n">150</td><td>700 / 950 / 1150</td></tr>
+    <tr><td>SKS</td><td class="n">600</td><td class="n">180</td><td>400 / 550 / 700</td></tr>
+    <tr><td>MP5</td><td class="n">650</td><td class="n">180</td><td>900 / 1200 / 1500</td></tr>
+    <tr><td>AK-74M</td><td class="n">1200</td><td class="n">250</td><td>1000 / 1300 / 1600</td></tr>
+    <tr><td>Kukri (melee)</td><td class="n">150</td><td colspan="2">another blade at your level: 350 / 750 / 1500</td></tr>
+    <tr><td>MK2 grenade</td><td class="n">60</td><td colspan="2">each</td></tr>
+    <tr><td>Landmine / Claymore</td><td class="n">100</td><td colspan="2">each</td></tr>
+  </table>
+  <h3>The mystery box</h3>
+  <p>Hold grip on the lid: it spins and offers a random weapon, which waits 8 seconds for you to take it. Your first turn each match costs <strong>500</strong>, each turn after 250 more, up to <strong>1250</strong>. Playing together there's one box; each player pays from their own points, and anyone can grab what it offers.</p>
+  <table class="t">
+    <tr><th>Tier</th><th>Chance at the start &rarr; at best</th><th>Weapons</th></tr>
+    <tr><td class="n">Melee</td><td class="n">10% &rarr; 4%</td><td>Crowbar, Fire Axe, Katana, Spiked Bat</td></tr>
+    <tr><td class="n">Common</td><td class="n">40% &rarr; 16%</td><td>P250, MP5, Remington 870, SKS, M4A1, Double Barrel, AK-74M, DE .50, MP7, MP40, <span class="pack">.357 Magnum</span>, <span class="pack">MK18</span></td></tr>
+    <tr><td class="n">Uncommon</td><td class="n">20% &rarr; 25%</td><td>AKM Classic, MCX, <span class="pack">AKM</span>, <span class="pack">P90</span>, <span class="pack">PPSh-41</span>, <span class="pack">AUG A3</span>, <span class="pack">FAMAS</span></td></tr>
+    <tr><td class="n">Rare</td><td class="n">15% &rarr; 30%</td><td>SPAS Shotgun, Kriss Vector, <span class="pack">FN Ballista</span>, <span class="pack">SCAR-L</span>, <span class="pack">AA-12</span>, <span class="pack">AWM</span></td></tr>
+    <tr><td class="n">Very rare</td><td class="n">15% &rarr; 25%</td><td>M60, MG 34, <span class="pack">M249</span>, <span class="pack">MG3</span>, <span class="pack">RPG-7</span></td></tr>
+  </table>
+  <p>The odds shift toward the good tiers with every round and every turn you take, and a run of bad luck pushes them further &mdash; until you get a rare or very rare. A weapon you've already had this match is less likely to come up again. Every weapon in a tier is equally likely. <span class="pack">Gold</span> weapons come with the Supporter Pack; without it they're left out of the draw.</p>
+  <h3>Doors</h3>
+  <p>With <strong>Multi-room</strong> on, the doorways between your scanned rooms are boarded up, and in the outdoor arena the sections are fenced off. Buy one open with grip: the first costs <strong>500</strong>, each after 250 more (shared in co-op). Open rooms bring more ways in &mdash; and more room to fight in. A room joins only if your scan has the door between them.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="upgrade">7. Power, perks and upgrades</h2>
+  <h3>The generator</h3>
+  <p>Perk machines and the upgrade station need <strong>power</strong>. Follow the cables to the generator and hold grip on it to start it: <strong>500</strong> points (1500 when it stands right beside you, in an open arena). Playing together, one start powers everyone.</p>
+  <h3>Perks</h3>
+  <p>Hold grip on a machine's button panel, then drink the bottle. Perks last for the match. Where there's no room for separate machines, a <strong>perk carousel</strong> sells several: turn it with the arrow buttons, then hold grip on Buy.</p>
+  <table class="t">
+    <tr><th>Perk</th><th>Price</th><th>What it does</th></tr>
+    <tr><td class="n">Toughness</td><td class="n">3000</td><td>50% more health.</td></tr>
+    <tr><td class="n">Firepower</td><td class="n">2650</td><td>50% more damage.</td></tr>
+    <tr><td class="n">Second Wind</td><td class="n">2250</td><td>Get back up by yourself once. Alone, without it, going down is game over.</td></tr>
+    <tr><td class="n">Handyman</td><td class="n">1900</td><td>Board up with your bare hands &mdash; no plank needed.</td></tr>
+    <tr><td class="n">Field Medic</td><td class="n">2250</td><td>Revive teammates in half the time (co-op).</td></tr>
+    <tr><td class="n pack">Pistol Akimbo</td><td class="n">7500</td><td>A pistol in each hand: reload each at the belt, rack by pulling with the other hand, no extra spread.</td></tr>
+    <tr><td class="n pack">AR / SMG Akimbo</td><td class="n">15000</td><td>The same for rifles or SMGs with a straight-pull charging handle.</td></tr>
+  </table>
+  <h3>The upgrade station</h3>
+  <p>It opens only during the <strong>upgrade break</strong> after rounds 9, 19, 29 &hellip; (and needs power). Drop a gun in the glowing slot and wait 6 seconds. Upgrade as many guns, as many times, as your points allow &mdash; up to level 3 each.</p>
+  <table class="t">
+    <tr><th>Gun's box tier</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
+    <tr><td>Common (and wall guns)</td><td class="n">1500</td><td class="n">2500</td><td class="n">4000</td></tr>
+    <tr><td>Uncommon</td><td class="n">1900</td><td class="n">3100</td><td class="n">5000</td></tr>
+    <tr><td>Rare</td><td class="n">2400</td><td class="n">4000</td><td class="n">6400</td></tr>
+    <tr><td>Very rare</td><td class="n">3000</td><td class="n">5000</td><td class="n">8000</td></tr>
+  </table>
+  <p>Every level: 15% more damage, 10% faster fire, ammo filled, a camo and a violet muzzle flash (red at level 3). Level 1 adds a spare magazine (machine guns get one every level); level 2 shoots through 2 zombies, level 3 through 3. Some guns get more: the M4, AUG and MP7 get 60- then 75-round magazines; the AK-74M goes fully automatic; the M9A1 and P250 go automatic, and at level 3 fire shots that burst like grenades; the Magnum and DE go automatic at level 2; snipers work their own bolt at level 3. Upgrading a grenade carries one more.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="gear">8. Your belt, grenades and drops</h2>
+  <div class="fig">
+    <svg viewBox="0 0 860 300" role="img" aria-label="The belt: two shoulder slots, two hip slots, grenade and mine pouches">
+      <g font-family="Inter, sans-serif" text-anchor="middle">
+        <circle cx="430" cy="52" r="30" fill="#1b1e26" stroke="#3a3f4c" stroke-width="2"/>
+        <path d="M370,90 Q430,80 490,90 L520,250 L340,250 Z" fill="#1b1e26" stroke="#3a3f4c" stroke-width="2"/>
+        <rect x="300" y="88" width="56" height="34" rx="8" fill="#c8141e"/><text x="250" y="104" fill="#fff" font-size="14" font-weight="600" text-anchor="end">Shoulder slot</text><text x="250" y="122" fill="#9aa0ad" font-size="12" text-anchor="end">any gun</text>
+        <rect x="504" y="88" width="56" height="34" rx="8" fill="#c8141e"/><text x="610" y="104" fill="#fff" font-size="14" font-weight="600" text-anchor="start">Shoulder slot</text><text x="610" y="122" fill="#9aa0ad" font-size="12" text-anchor="start">any gun</text>
+        <rect x="402" y="128" width="56" height="26" rx="6" fill="#ffb347"/><text x="430" y="178" fill="#ffb347" font-size="13" font-weight="600">grenades (chest)</text>
+        <rect x="336" y="206" width="52" height="34" rx="8" fill="#8b1016"/><text x="250" y="222" fill="#fff" font-size="14" font-weight="600" text-anchor="end">Hip slot</text><text x="250" y="240" fill="#9aa0ad" font-size="12" text-anchor="end">pistol, SMG, melee</text>
+        <rect x="472" y="206" width="52" height="34" rx="8" fill="#8b1016"/><text x="610" y="222" fill="#fff" font-size="14" font-weight="600" text-anchor="start">Hip slot</text><text x="610" y="240" fill="#9aa0ad" font-size="12" text-anchor="start">pistol, SMG, melee</text>
+        <rect x="406" y="214" width="48" height="22" rx="5" fill="#3a3f4c"/><text x="430" y="275" fill="#9aa0ad" font-size="12">mine pouch &middot; magazine pouches</text>
+      </g>
+    </svg>
+    <p class="cap">Two hands and four slots: up to six guns. Click a thumbstick for a menu of what's on your belt.</p>
+  </div>
+  <ul>
+    <li><strong>Holster</strong> a gun by letting go of it over a slot. A dropped gun flies back to its slot. Let go over a full slot and the two swap &mdash; the old one goes into your hand.</li>
+    <li><strong>Machine guns</strong> (M60, MG 34, M249, MG3), the minigun and the flamethrower need both hands.</li>
+    <li><strong>Grenades</strong> (MK2): 4 more each round, up to 6, from a chest slot that refills. Pull the pin with your other hand's trigger (or your mouth), throw. One with its pin still in can be put back.</li>
+    <li><strong>Drops</strong>: now and then a kill drops something (at most two a round, gone after 30 seconds): <strong>Full Ammo</strong> refills every gun you carry; from round 6 a <strong>flamethrower</strong>, from round 11 <strong>MAX CHAOS</strong> (30 seconds of free fire), from round 15 a <strong>minigun</strong>. The drop weapons last until they run dry.</li>
+  </ul>
+
+  <!-- ======================================================================================= -->
+  <h2 id="down">9. Going down and reviving</h2>
+  <ul>
+    <li>You heal 10 health a second after 5 seconds without being hit.</li>
+    <li><strong>Alone</strong>: at 0 health it's game over &mdash; unless you have <strong>Second Wind</strong>, which lets you choose to get back up (on half health).</li>
+    <li><strong>Together</strong>: you go down and bleed out over 30 seconds. A teammate revives you by holding a hand near your head for about 7 seconds (half that with Field Medic); you're back on half health. Bled out, you're back next round with full health but only your starting pistol and no perks &mdash; your points are kept. The match ends when nobody is left standing.</li>
+    <li>Staying within 3 m of a teammate gives you both 10% more damage and healing.</li>
+  </ul>
+
+  <!-- ======================================================================================= -->
+  <h2 id="progress">10. Levels, scores and the Supporter Pack</h2>
+  <ul>
+    <li><strong>XP</strong>: 10 a kill, 40 for every round you play from start to finish, and a little for time played. Level 2 at 250 XP, 3 at 750, 4 at 1500, 5 at 2500 &hellip; Levels show your experience; they don't lock anything &mdash; every gun and attachment in the gunsmith is open from the start.</li>
+    <li><strong>Leaderboards</strong> (SCORES): best and all-time scores, for your room and for the outdoor arena, everyone or just friends.</li>
+    <li><strong>Supporter Pack</strong> (SUPPORT tab): 14 more mystery box guns (gold above), the Akimbo perks, and co-op for 3&ndash;4 players (only the host needs it). Everything else is free. See the <a href="../faq/">FAQ</a>.</li>
+  </ul>
+
+  <!-- ======================================================================================= -->
+  <h2 id="coop">11. Playing together</h2>
+  <ol>
+    <li>Everyone in the <strong>same physical space</strong> and on the <strong>same Wi-Fi</strong>.</li>
+    <li>One player: <strong>PLAY</strong> page &rarr; co-op box &rarr; <strong>Host a game here</strong>. The host's room becomes everyone's room.</li>
+    <li>The others: <strong>Join</strong> the game shown (or accept the host's invite).</li>
+    <li>Everyone lines up (next section) &mdash; usually by itself within a few seconds.</li>
+    <li>The host starts the match. The host runs the zombies; everyone sees and fights the same ones.</li>
+  </ol>
+  <p>If someone crashes or drops out, they can <strong>Rejoin</strong>, and the others can choose to go on without them.</p>
+
+  <!-- ======================================================================================= -->
+  <h2 id="lineup">12. Lining up headsets</h2>
+  <p>Each headset tracks the room in its own way. To play together, every headset has to agree where the walls, windows and zombies are &mdash; that's &ldquo;lining up&rdquo;. A headset that isn't lined up sees everything shifted or turned.</p>
+
+  <h3>What happens by itself</h3>
+  <div class="fig">
+    <svg viewBox="0 0 860 210" role="img" aria-label="Automatic line-up order: host's shared anchor, then this headset's saved line-up, then room scans">
+      <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff3b3b"/></marker></defs>
+      <g font-family="Inter, sans-serif" text-anchor="middle">
+        <rect x="10" y="30" width="250" height="110" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="135" y="62" fill="#ff3b3b" font-size="13" font-weight="700" letter-spacing="2">FIRST</text>
+        <text x="135" y="88" fill="#fff" font-size="17" font-weight="700">Host's shared anchor</text>
+        <text x="135" y="110" fill="#9aa0ad" font-size="12">through Meta: needs internet and</text>
+        <text x="135" y="126" fill="#9aa0ad" font-size="12">Enhanced Spatial Services</text>
+        <rect x="305" y="30" width="250" height="110" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="430" y="62" fill="#ff3b3b" font-size="13" font-weight="700" letter-spacing="2">THEN</text>
+        <text x="430" y="88" fill="#fff" font-size="17" font-weight="700">Your saved line-up</text>
+        <text x="430" y="110" fill="#9aa0ad" font-size="12">from playing with this host here</text>
+        <text x="430" y="126" fill="#9aa0ad" font-size="12">before &mdash; works offline</text>
+        <rect x="600" y="30" width="250" height="110" rx="14" fill="#1b1e26" stroke="#c8141e" stroke-width="2"/>
+        <text x="725" y="62" fill="#ff3b3b" font-size="13" font-weight="700" letter-spacing="2">MEANWHILE</text>
+        <text x="725" y="88" fill="#fff" font-size="17" font-weight="700">Room scans matched</text>
+        <text x="725" y="110" fill="#9aa0ad" font-size="12">your scan's walls against the</text>
+        <text x="725" y="126" fill="#9aa0ad" font-size="12">host's, when both have one</text>
+        <path d="M262,85 L300,85" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar2)"/>
+        <path d="M557,85 L595,85" stroke="#ff3b3b" stroke-width="3" marker-end="url(#ar2)"/>
+        <text x="430" y="182" fill="#ffb347" font-size="15" font-weight="600">None of them? Line up by QR code or by touch (below).</text>
+      </g>
+    </svg>
+  </div>
+  <ul>
+    <li><strong>The host's shared anchor</strong>: the hosting headset marks a spot on its floor and shares it through Meta; your headset finds the same spot. This needs the internet and <strong>Enhanced Spatial Services</strong> on both headsets (Settings &gt; Privacy &amp; Safety &gt; Device permissions).</li>
+    <li><strong>Your saved line-up</strong>: once you've lined up with a host in a room, your headset remembers it. Next time, if the shared anchor can't be had (or takes more than a few seconds), the saved line-up does the job &mdash; offline. If the shared anchor turns up later and disagrees, it wins and the saved line-up is replaced.</li>
+    <li><strong>Room scans</strong>: when both headsets have scanned the room, the host matches the walls, doors and windows of the two scans.</li>
+  </ul>
+  <p>The co-op box says <strong>Lined up with the host</strong> when it's done. Check by looking at a window: its frame should sit on the real one.</p>
+
+  <h3>When to line up yourself</h3>
+  <table class="t">
+    <tr><th>If&hellip;</th><th>Use</th></tr>
+    <tr><td>There's no internet, or Enhanced Spatial Services is off, and it's your first time together in this room</td><td>QR code (or touch)</td></tr>
+    <tr><td>Your headset hasn't scanned this room (&ldquo;This room isn't scanned&rdquo;)</td><td>QR code (or touch)</td></tr>
+    <tr><td>Walls or windows look shifted or turned by a few centimetres or more</td><td>QR code, then touch, then <strong>Line up again</strong></td></tr>
+    <tr><td>An older headset, or Horizon OS before v83 (no QR code option)</td><td>Touch</td></tr>
+    <tr><td>Outdoors</td><td>QR code on the ground, or stand where the host started and press <strong>Line up here</strong></td></tr>
+  </table>
+  <p>The buttons are in the <strong>PLAY</strong> page's co-op box between games, and on <strong>SETTINGS</strong> during a match. Lining up during a match takes you out of the fight for up to 30 seconds (zombies leave you alone), once a round, and not while you're down, just hurt, or with a zombie close by.</p>
+
+  <h3>Lining up by QR code</h3>
+  <p>Needs Quest 3 or 3S on Horizon OS v83 or later. Print a code from the <a href="../lineup/">line-up code page</a> first.</p>
+  <div class="steps-grid">
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><rect x="130" y="20" width="140" height="160" fill="#f2f2f2"/><g fill="#111"><rect x="150" y="48" width="30" height="30"/><rect x="220" y="48" width="30" height="30"/><rect x="150" y="118" width="30" height="30"/><rect x="196" y="96" width="14" height="14"/><rect x="214" y="122" width="10" height="10"/><rect x="232" y="104" width="18" height="10"/><rect x="190" y="130" width="12" height="18"/><rect x="234" y="134" width="16" height="14"/></g><g fill="#f2f2f2"><rect x="156" y="54" width="18" height="18"/><rect x="226" y="54" width="18" height="18"/><rect x="156" y="124" width="18" height="18"/></g><g fill="#111"><rect x="161" y="59" width="8" height="8"/><rect x="231" y="59" width="8" height="8"/><rect x="161" y="129" width="8" height="8"/></g><line x1="150" y1="168" x2="250" y2="168" stroke="#c8141e" stroke-width="3"/><text x="200" y="194" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">18 cm &middot; print at 100%</text></svg>
+      <div class="num">Step 1</div>
+      <p>Print a code at <strong>actual size</strong> (the black square 18 cm across) on plain matte paper.</p>
+    </div>
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><path d="M40,60 L360,60 L360,170 L40,170 Z" fill="#1b1e26"/><path d="M40,60 L120,20 L280,20 L360,60" fill="#232733"/><path d="M150,128 L250,128 L270,160 L130,160 Z" fill="#f2f2f2"/><g fill="#111"><rect x="160" y="134" width="14" height="8"/><rect x="226" y="134" width="14" height="8"/><rect x="152" y="148" width="16" height="9"/><rect x="196" y="140" width="10" height="6"/></g><rect x="60" y="74" width="60" height="60" fill="#f2f2f2"/><g fill="#111"><rect x="66" y="80" width="14" height="14"/><rect x="100" y="80" width="14" height="14"/><rect x="66" y="114" width="14" height="14"/><rect x="88" y="98" width="8" height="8"/></g><text x="200" y="192" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">flat on the floor, or flat on a wall</text></svg>
+      <div class="num">Step 2</div>
+      <p>Tape it <strong>flat</strong> on the floor (where nobody steps) or on a wall at chest height, somewhere well lit. Leave it there.</p>
+    </div>
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><ellipse cx="110" cy="70" rx="40" ry="26" fill="#2a2e39" stroke="#3a3f4c" stroke-width="2"/><rect x="88" y="62" width="44" height="16" rx="8" fill="#111"/><path d="M140,80 L280,140" stroke="#ff3b3b" stroke-width="2" stroke-dasharray="6 5"/><path d="M240,130 L320,130 L336,160 L224,160 Z" fill="#f2f2f2"/><g fill="#111"><rect x="246" y="136" width="12" height="7"/><rect x="304" y="136" width="12" height="7"/><rect x="240" y="148" width="14" height="8"/></g><text x="110" y="122" fill="#fff" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle">HOST</text><text x="200" y="192" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">Read the QR code &middot; hold still a moment</text></svg>
+      <div class="num">Step 3 &middot; host</div>
+      <p>The host presses <strong>Read the QR code</strong> and looks at it from a step or two away, holding still a moment, until it says <strong>QR code read</strong>. Once a session is enough.</p>
+    </div>
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><ellipse cx="290" cy="70" rx="40" ry="26" fill="#2a2e39" stroke="#3a3f4c" stroke-width="2"/><rect x="268" y="62" width="44" height="16" rx="8" fill="#111"/><path d="M260,80 L130,140" stroke="#ff3b3b" stroke-width="2" stroke-dasharray="6 5"/><path d="M80,130 L160,130 L176,160 L64,160 Z" fill="#f2f2f2"/><g fill="#111"><rect x="86" y="136" width="12" height="7"/><rect x="144" y="136" width="12" height="7"/><rect x="80" y="148" width="14" height="8"/></g><text x="290" y="122" fill="#fff" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle">FRIEND</text><text x="200" y="192" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">Line up by QR code &middot; &ldquo;Lined up&rdquo;</text></svg>
+      <div class="num">Step 4 &middot; everyone else</div>
+      <p>Each friend presses <strong>Line up by QR code</strong> and looks at the same code, holding still a moment: <strong>Lined up by the QR code</strong>. The line-up is saved for next time.</p>
+    </div>
+  </div>
+  <p class="note">The headset reads the code itself; the game is told only where it is and what it says, never a camera image. It needs the game's Spatial Data permission &mdash; the game asks for it if it was turned off.</p>
+
+  <h3>Lining up by touch</h3>
+  <p>Works on any headset, with no internet and no scan. Pick <strong>two spots everyone can reach</strong>, at least 1 m apart (2&ndash;3 m is best) &mdash; two corners of a table, or two marks on the floor.</p>
+  <div class="steps-grid">
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><path d="M40,150 L360,150" stroke="#3a3f4c" stroke-width="3"/><rect x="60" y="96" width="280" height="20" rx="4" fill="#3b2f25"/><circle cx="80" cy="96" r="10" fill="none" stroke="#ff3b3b" stroke-width="3"/><circle cx="320" cy="96" r="10" fill="none" stroke="#ff3b3b" stroke-width="3"/><text x="80" y="78" fill="#fff" font-family="Inter,sans-serif" font-size="18" font-weight="700" text-anchor="middle">A</text><text x="320" y="78" fill="#fff" font-family="Inter,sans-serif" font-size="18" font-weight="700" text-anchor="middle">B</text><path d="M95,135 L305,135" stroke="#ffb347" stroke-width="2" marker-end="url(#ar)"/><text x="200" y="182" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">2&ndash;3 m apart is best (at least 1 m)</text></svg>
+      <div class="num">Step 1</div>
+      <p>Agree on spot <strong>A</strong> and spot <strong>B</strong>. Everyone touches the same two, in the same order.</p>
+    </div>
+    <div class="step">
+      <svg viewBox="0 0 400 200" aria-hidden="true"><rect width="400" height="200" rx="12" fill="#0f1116"/><rect x="60" y="140" width="280" height="18" rx="4" fill="#3b2f25"/><g transform="translate(200,62) rotate(10)"><rect x="-22" y="-44" width="44" height="80" rx="20" fill="#2a2e39" stroke="#3a3f4c" stroke-width="2"/><circle cx="0" cy="-30" r="18" fill="none" stroke="#3a3f4c" stroke-width="5"/><rect x="-5" y="34" width="10" height="44" rx="4" fill="#2a2e39"/></g><circle cx="194" cy="140" r="9" fill="none" stroke="#ff3b3b" stroke-width="3"/><text x="384" y="70" fill="#ffb347" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="end">hold trigger 1 s</text><text x="384" y="90" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="end">keep it still &rarr; buzz</text><text x="200" y="190" fill="#9aa0ad" font-family="Inter,sans-serif" font-size="13" text-anchor="middle">empty hand &middot; controller tip on the spot</text></svg>
+      <div class="num">Step 2</div>
+      <p>The host presses <strong>Set the touch spots</strong>; each friend presses <strong>Line up by touch</strong>. With an <strong>empty hand</strong>, put the controller's tip on spot A and <strong>hold the trigger still for a second</strong> until it buzzes. Then spot B the same way.</p>
+    </div>
+  </div>
+  <p>It doesn't matter who goes first. When both have touched, you're lined up (&ldquo;Lined up with the host by touch&rdquo;). If the game says your spots are a different distance apart from the host's, you touched different spots &mdash; start again at A.</p>
+
+  <h3>Still out of line?</h3>
+  <ul>
+    <li>Check both headsets scanned the same room recently (<strong>Space Setup</strong>), in good light.</li>
+    <li>Try <strong>Line up again</strong>, then the QR code, then touch.</li>
+    <li>The host can press <strong>Realign</strong>: everyone lines up again with the host's room as it is now.</li>
+    <li>Still stuck? <a href="../../support/">Tell us</a> &mdash; include the headsets' Horizon OS versions.</li>
+  </ul>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>&copy; 2026 Night Shift Games &middot; Wisconsin, USA</div>
+    <nav>
+      <a href="../../">Night Shift Games</a>
+      <a href="../">Barricaded</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../privacy/">Privacy policy</a>
+      <a href="../terms/">Terms of service</a>
+      <a href="../credits/">Credits</a>
+      <a href="../../support/">Support</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
