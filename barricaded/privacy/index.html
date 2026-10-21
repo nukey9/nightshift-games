@@ -55,6 +55,8 @@ attach it). If you buy the optional Supporter Pack, Meta handles the purchase; w
   <li>your best score, the wave you reached, and whether that match was played alone or with others;</li>
   <li>your total points, games played, kills, most kills in one match, and time played;</li>
   <li>how many kills you got with each weapon (used to show your favourite gun);</li>
+  <li>the attachments each weapon wore (sight, grip, muzzle device, laser) when you last got a kill with it, used to show your
+  favourite gun on your player profile as you had it;</li>
   <li>your experience points (XP), earned across all modes, which set your level.</li>
 </ul>
 <p>This information is saved in a file on your headset. Your display name, scores, these stats and your level are shown to other
@@ -62,13 +64,13 @@ players of Barricaded on the in-game leaderboards and player profiles (your XP t
 
 <h2>Leaderboards and fair play</h2>
 <p>To keep the leaderboards fair, the game doesn't post scores itself. When you play signed in to Meta, after each match it sends
-the match result (score, wave, kills, time, the weapons you used, whether you played alone or with others) and your XP to our
+the match result (score, wave, kills, time, the weapons you used and their attachments, whether you played alone or with others) and your XP to our
 <strong>score server</strong>, together with your user ID and two proofs issued by Meta: one confirming which Meta account is
 playing, and one confirming that the game is a genuine, unmodified copy running on a real Meta Quest (Meta's device and app
 integrity check). Matches played offline are sent the next time you're online.</p>
 <p>Our score server checks the proofs with Meta, checks the match could really have been played, and then writes your entries to
 <strong>Meta's leaderboard service</strong>. It keeps a running record of your standing in each mode (games, scores, kills, time
-played, your top weapons and your XP) so the all-time totals can't be tampered with. It doesn't keep the proofs.</p>
+played, your top weapons and their attachments, and your XP) so the all-time totals can't be tampered with. It doesn't keep the proofs.</p>
 <p>Each leaderboard entry on Meta carries, with your score, the stats behind it: on the best-match boards whether the match was
 played alone or with others and the wave reached; on the all-time boards your standing in that mode as listed above, and your XP.
 That is how other players' games show your profile and level. Like the scores and your display name, these entries can be read by
@@ -78,7 +80,7 @@ server runs on <strong>Cloudflare</strong>.</p>
 <p><strong>On our Discord server.</strong> The leaderboards are also shown in the #leaderboard channel of Barricaded's official
 Discord server: each board's top ten (your Meta username, your score, and for best matches the wave reached and whether you played
 with others). Anyone in the server can also open your profile there: your level, your Meta profile picture, and your standing in
-each mode as listed above. It is read from the same leaderboards and our score server's record of your standing, by a bot that
+each mode as listed above (not your weapons' attachments). It is read from the same leaderboards and our score server's record of your standing, by a bot that
 also runs on Cloudflare, and Discord shows it under <a href="https://discord.com/privacy">Discord's own privacy policy</a>.
 If we delete your leaderboard entries at your request, you are removed from the Discord leaderboard within 10 minutes.</p>
 
