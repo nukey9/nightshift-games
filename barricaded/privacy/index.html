@@ -24,7 +24,7 @@
 </header>
 <main class="doc">
 <h1>Barricaded Mixed Reality Privacy Policy</h1>
-<p class="meta">Effective October 21, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
+<p class="meta">Effective October 22, 2026 &middot; Night Shift Games &middot; <a href="../">Back to Barricaded</a></p>
 
 <p>This policy explains what information <strong>Barricaded Mixed Reality</strong> ("Barricaded"), a mixed reality game for Meta Quest, uses, why it uses it,
 and the choices you have. Barricaded is made by Night Shift Games, in Wisconsin, USA
@@ -34,7 +34,9 @@ and the choices you have. Barricaded is made by Night Shift Games, in Wisconsin,
 your match results and saved progress, which go to our score server so they can be checked, placed on Meta's leaderboards and
 kept with your account; when you play co-op, a spatial anchor shared through Meta so the headsets in the room can line up with
 each other; and a report, only when you send one from the game's REPORT / HELP page (with the game's log only if you choose to
-attach it). If you buy the optional Supporter Pack, Meta handles the purchase; we never see your payment details.</p>
+attach it). Test versions of the game (our Alpha and Beta releases) also send statistics about how the game runs and how your
+matches go, under a random ID that isn't linked to your account, unless you turn it off. If you buy the optional Supporter Pack,
+Meta handles the purchase; we never see your payment details.</p>
 
 <h2>Information we get from Meta</h2>
 <p>When you play with your Meta account, the game uses Meta's platform to get:</p>
@@ -138,7 +140,9 @@ If we delete your leaderboard entries at your request, you are removed from the 
 collects and looks after that account information, and the arcade's own privacy notice applies to it. We don't receive it.</p>
 
 <h2>Technical information</h2>
-<p>The game is built with the Unity engine, with Unity's engine statistics turned off. We don't use advertising, tracking or analytics services.</p>
+<p>The game is built with the Unity engine, with Unity's engine statistics turned off. We don't use advertising, tracking or
+third-party analytics services. Test versions of the game send statistics to our own stats server, described under
+<a href="#test-version-statistics">Test version statistics</a>.</p>
 
 <h2>When you contact us</h2>
 <p>If you email us or use the support form on <a href="../../support/">our website</a>, we receive what you send: your message,
@@ -172,6 +176,35 @@ report only until the email is handed over, and keeps a reference to it for 30 d
 and any log attached, only to answer you, look into what you reported and fix problems, and keep them for as long as we need to
 for that.</p>
 
+<h2 id="test-version-statistics">Test version statistics</h2>
+<p>Test versions of Barricaded (the Alpha and Beta releases we give testers before a public release, and our own test builds) send
+statistics to help us find and fix bugs, make the game run smoothly on every headset, and balance it. The public release doesn't
+send them. They are sent after each match, and whenever your headset is next online if it wasn't; they wait on your headset until
+then.</p>
+<ul>
+  <li><strong>How the game runs</strong>, during each match: frame times (average, slowest and how often frames were late or the
+  game stuttered), how busy the processor and graphics were, your headset's model, its system version and memory, its battery
+  level and whether it was charging, how warm it ran and whether it slowed down to cool, power saving, the display rate and the
+  game's graphics settings, its memory use, and the most zombies on screen at once.</li>
+  <li><strong>Errors</strong>: the errors the game ran into, with where in the game's code they happened, how often, and whether the
+  game closed unexpectedly last time, with the game's version. Anything in them that could identify you (names of files and
+  folders, web and email addresses, long numbers and IDs) is removed before they are sent.</li>
+  <li><strong>How your matches go</strong>: the wave you reached and where you started, kills and score, how long the match lasted
+  and how it ended, the reload mode, play area and map, whether you played alone or with others and how many players there were,
+  times you went down and were revived, the perks you had, and each weapon you used (kills, shots, time in hand and upgrade
+  level).</li>
+</ul>
+<p>Each report carries a random ID made when you first share statistics, so reports from the same headset can be counted together.
+It isn't your Meta user ID, your name or your headset's own ID, and the statistics don't include your Meta account, room scans,
+camera images, tracking recordings or your location. Our stats server runs on Cloudflare. Cloudflare handles your IP address to
+make the connection; the server doesn't store it, only the country the report came from.</p>
+<p>We use these statistics only to fix problems and improve the game, which is our legitimate interest in sending them. Sharing is
+on in test versions, and you can turn it off at any time: untick <em>Share crash, performance and gameplay stats</em> when you agree to these terms, or set
+<em>Settings &gt; Privacy &gt; Share test stats</em> to OFF. Turning it off stops the statistics, throws away any waiting on your
+headset, and deletes the ones already sent from our server (when your headset is next online). Because they aren't linked to your
+account, that switch is how to delete them; we keep them for 90 days in any case. After that we keep only a list of the errors
+found (their text and how often they happened), with no ID.</p>
+
 <h2>This website</h2>
 <p>Our website (nightshift-games.com) is hosted by Cloudflare. It doesn't use cookies, analytics or advertising. Like any website,
 Cloudflare's servers handle your IP address to deliver the pages, and the site's fonts are loaded from Google Fonts, which also
@@ -179,7 +212,7 @@ receives your IP address when it delivers them.</p>
 
 <h2>Sharing</h2>
 <p>We don't sell or rent your information, and we don't share it with anyone except as described above: Meta, which runs the
-leaderboards and the store (including purchases of the Supporter Pack); Cloudflare, which runs our score server, report service, website and email; and other players, who can see leaderboard names, scores and stats. We would only disclose information if the law required it.</p>
+leaderboards and the store (including purchases of the Supporter Pack); Cloudflare, which runs our score server, report service, stats server, website and email; and other players, who can see leaderboard names, scores and stats. We would only disclose information if the law required it.</p>
 
 <h2>How long information is kept</h2>
 <ul>
@@ -187,11 +220,13 @@ leaderboards and the store (including purchases of the Supporter Pack); Cloudfla
   <li>Leaderboard entries, and the standing our score server keeps for them, are kept for as long as the game's leaderboards exist, or until you ask us to delete them.</li>
   <li>Saved progress is kept with your account for as long as the game's online services run, or until you ask us to delete it.</li>
   <li>The game's logs on your headset: its last five sessions. A report, and any log sent with it, as described under In-game reports and crash reports.</li>
+  <li>Test version statistics: 90 days, or until you turn sharing off; then only the list of errors found, with no ID.</li>
 </ul>
 
 <h2>Your choices and rights</h2>
 <ul>
   <li><strong>Delete your leaderboard entries.</strong> Email us from any address, with your Meta username, and we will delete your entries from the game's leaderboards and the standing our score server keeps (which also takes you off the leaderboard on our Discord server).</li>
+  <li><strong>Stop or delete test version statistics.</strong> Turn off <em>Settings &gt; Privacy &gt; Share test stats</em>; what was sent is deleted from our server.</li>
   <li><strong>See or correct your information.</strong> Your scores and stats are shown in the game. Email us with any question about the information we hold.</li>
   <li>Uninstalling the game removes everything it saved on your headset.</li>
   <li>You can manage your Meta account, username and privacy settings in Meta's own apps and settings.</li>
@@ -203,7 +238,7 @@ leaderboards and the store (including purchases of the Supporter Pack); Cloudfla
 If you believe a child under 13 has used the game with an account, email us and we'll delete their leaderboard entries.</p>
 
 <h2>Security</h2>
-<p>Match results travel to our score server over an encrypted (HTTPS) connection, and from there to Meta's leaderboard service. Our score server keeps only your leaderboard standing, described above.</p>
+<p>Match results travel to our score server over an encrypted (HTTPS) connection, and from there to Meta's leaderboard service. Our score server keeps only your leaderboard standing, described above. Test version statistics also travel over HTTPS, and only we can see them.</p>
 
 <h2>Changes to this policy</h2>
 <p>If the game starts using new information (for example online invites), we will update this policy before
