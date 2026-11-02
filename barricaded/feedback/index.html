@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barricaded Feedback &mdash; Night Shift Games</title>
+<meta name="description" content="Tell us what you think of Barricaded Mixed Reality: what you enjoy, what frustrates you, and what would make you play more.">
+<link rel="icon" href="../../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<style>
+  #feedback .q { display: block; margin: 0 0 22px; font-weight: 600; font-size: 16px; color: var(--text); }
+  #feedback .q small { display: block; font-weight: 400; color: var(--faint); font-size: 14px; margin-top: 2px; }
+  #feedback .opt { color: var(--faint); font-weight: 400; }
+  #feedback input[type=text], #feedback input[type=email], #feedback select, #feedback textarea {
+    display: block; width: 100%; margin-top: 8px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); font: 16px/1.5 "Inter", sans-serif;
+  }
+  #feedback textarea { resize: vertical; min-height: 96px; }
+  #feedback input:focus, #feedback select:focus, #feedback textarea:focus { outline: 2px solid rgba(255, 181, 71, 0.6); outline-offset: 1px; border-color: transparent; }
+  #feedback fieldset { border: 0; margin: 0 0 22px; padding: 0; }
+  #feedback legend { font-weight: 600; font-size: 16px; color: var(--text); margin-bottom: 10px; padding: 0; }
+  #feedback .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  #feedback .chips label { cursor: pointer; }
+  #feedback .chips input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  #feedback .chips span { display: inline-block; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--dim); font-weight: 500; }
+  #feedback .chips input:checked + span { background: rgba(255, 181, 71, 0.16); border-color: rgba(255, 181, 71, 0.7); color: var(--text); }
+  #feedback .chips input:focus-visible + span { outline: 2px solid rgba(255, 181, 71, 0.6); outline-offset: 1px; }
+  #feedback .scale span { min-width: 46px; text-align: center; }
+  #feedback .scale-ends { display: flex; justify-content: space-between; max-width: 290px; font-size: 13px; color: var(--faint); margin-top: 6px; }
+  #feedback .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  #feedback .part { margin: 30px 0 16px; padding-top: 22px; border-top: 1px solid var(--line); }
+  #feedback .part:first-of-type { margin-top: 6px; padding-top: 0; border-top: 0; }
+  #feedback .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  #feedback .fine { font-size: 14px; color: var(--faint); }
+  #feedback button[disabled] { opacity: 0.6; cursor: wait; }
+  #feedback .status { margin: 14px 0 0; font-weight: 600; min-height: 1.5em; }
+  #feedback .status.ok { color: #3ddc97; }
+  #feedback .status.err { color: var(--blood-hi); }
+  @media (max-width: 620px) { #feedback .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../">Night Shift Games</a>
+    <nav class="nav">
+      <a href="../">Barricaded</a>
+      <a href="../guide/" class="hide-sm">Guide</a>
+      <a href="../faq/">FAQ</a>
+      <a href="./" class="on">Feedback</a>
+      <a href="../../support/">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section style="padding-bottom:48px">
+    <div class="wrap" style="max-width:860px">
+      <div class="eyebrow">Barricaded Mixed Reality</div>
+      <h2>Tell us what you think</h2>
+      <p class="lead">Every answer is read by the person making the game. Answer as many or as few questions as you like &mdash; even one line helps.</p>
+      <p style="margin-top:6px">Something broken that needs fixing now? Use the <a href="../../support/">support form</a> instead, so we can get back to you.</p>
+
+      <form id="feedback" class="card" style="margin-top:28px" novalidate>
+        <div class="k part">About you</div>
+        <fieldset>
+          <legend>Overall, how much are you enjoying Barricaded?</legend>
+          <div class="chips scale">
+            <label><input type="radio" name="rating" value="1"><span>1</span></label>
+            <label><input type="radio" name="rating" value="2"><span>2</span></label>
+            <label><input type="radio" name="rating" value="3"><span>3</span></label>
+            <label><input type="radio" name="rating" value="4"><span>4</span></label>
+            <label><input type="radio" name="rating" value="5"><span>5</span></label>
+          </div>
+          <div class="scale-ends"><span>Not at all</span><span>Loving it</span></div>
+        </fieldset>
+        <fieldset>
+          <legend>How have you played? <span class="opt">(choose any)</span></legend>
+          <div class="chips">
+            <label><input type="checkbox" name="played" value="Solo"><span>Solo</span></label>
+            <label><input type="checkbox" name="played" value="Co-op"><span>Co-op</span></label>
+            <label><input type="checkbox" name="played" value="Your Room"><span>Your Room</span></label>
+            <label><input type="checkbox" name="played" value="Outdoor"><span>Outdoor</span></label>
+            <label><input type="checkbox" name="played" value="Casual"><span>Casual</span></label>
+            <label><input type="checkbox" name="played" value="Hardcore"><span>Hardcore</span></label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <label class="q">How long have you played?
+            <select name="hours">
+              <option value="">Choose&hellip;</option>
+              <option>Under 1 hour</option>
+              <option>1-5 hours</option>
+              <option>5-20 hours</option>
+              <option>Over 20 hours</option>
+            </select>
+          </label>
+          <label class="q">Headset
+            <select name="headset">
+              <option value="">Choose&hellip;</option>
+              <option>Meta Quest 3</option>
+              <option>Meta Quest 3S</option>
+              <option>Meta Quest Pro</option>
+              <option>Meta Quest 2</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="k part">The game</div>
+        <label class="q">What did you enjoy most?
+          <textarea name="enjoyed" maxlength="3000"></textarea>
+        </label>
+        <label class="q">What frustrated you, or felt unfair?
+          <textarea name="frustrated" maxlength="3000"></textarea>
+        </label>
+        <label class="q">How did the difficulty feel? Which round do you usually reach?
+          <textarea name="difficulty" maxlength="3000"></textarea>
+        </label>
+        <label class="q">How do the guns, reloading and melee feel?
+          <textarea name="guns" maxlength="3000"></textarea>
+        </label>
+        <label class="q">Did anything break or behave strangely? What were you doing when it happened?
+          <textarea name="bugs" maxlength="3000"></textarea>
+        </label>
+        <label class="q">How does the game run and feel in the headset?
+          <small>Smoothness, comfort, motion, anything that pulled you out of it.</small>
+          <textarea name="comfort" maxlength="3000"></textarea>
+        </label>
+        <label class="q">If you played co-op: how did joining and lining up go?
+          <textarea name="coop" maxlength="3000"></textarea>
+        </label>
+        <label class="q">What one thing would most make you play more?
+          <textarea name="next" maxlength="3000"></textarea>
+        </label>
+        <label class="q">Anything else you want us to know?
+          <textarea name="other" maxlength="3000"></textarea>
+        </label>
+
+        <div class="k part">If you'd like a reply <span class="opt">(all optional)</span></div>
+        <div class="two">
+          <label class="q">Your email
+            <input type="email" name="email" maxlength="200" autocomplete="email" placeholder="you@example.com">
+          </label>
+          <label class="q">Name
+            <input type="text" name="name" maxlength="100" autocomplete="name">
+          </label>
+        </div>
+        <label class="q">Meta username <small>Only if your answer is about something on your account, like your progress.</small>
+          <input type="text" name="meta" maxlength="60" autocomplete="off">
+        </label>
+        <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="fine">We use your answers only to make the game better, and to reply if you ask us to. See our <a href="../privacy/">Privacy Policy</a>.</p>
+        <button class="btn btn-blood" type="submit">Send feedback</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>&copy; 2026 Night Shift Games &middot; Wisconsin, USA</div>
+    <nav>
+      <a href="../../">Night Shift Games</a>
+      <a href="../">Barricaded</a>
+      <a href="../privacy/">Privacy policy</a>
+      <a href="../terms/">Terms of service</a>
+    </nav>
+  </div>
+</footer>
+<script>
+(function () {
+  var form = document.getElementById("feedback"), status = document.getElementById("status");
+  var questions = ["enjoyed", "frustrated", "difficulty", "guns", "bugs", "comfort", "coop", "next", "other"];
+  var opened = Date.now();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = new FormData(form), answers = {}, written = 0;
+    questions.forEach(function (q) { var a = (f.get(q) || "").trim(); if (a) { answers[q] = a; written += a.length; } });
+    var rating = parseInt(f.get("rating"), 10) || 0;
+    status.className = "status";
+    if (written < 10 && !rating) { status.textContent = "Please answer at least one question."; status.classList.add("err"); return; }
+    var data = { rating: rating, played: f.getAll("played"), hours: f.get("hours") || "", headset: f.get("headset") || "",
+                 answers: answers, email: (f.get("email") || "").trim(), name: (f.get("name") || "").trim(), meta: (f.get("meta") || "").trim(),
+                 website: f.get("website") || "", elapsed: Date.now() - opened };
+    var button = form.querySelector("button[type=submit]");
+    button.disabled = true; status.textContent = "Sending…";
+    fetch("https://report.nightshift-games.com/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+      .then(function (r) {
+        if (r.ok) {
+          form.reset(); opened = Date.now();
+          status.textContent = "Thank you — your feedback is in." + (data.email ? " We'll reply to " + data.email + " if we have questions." : "");
+          status.classList.add("ok");
+        } else {
+          status.textContent = r.error || "Couldn't send that. Please email support@nightshift-games.com instead.";
+          status.classList.add("err");
+        }
+      })
+      .catch(function () { status.textContent = "Couldn't reach us. Please email support@nightshift-games.com instead."; status.classList.add("err"); })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
